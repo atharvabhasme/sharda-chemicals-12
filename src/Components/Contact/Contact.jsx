@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const googleFormURL =
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1FZr6Jjcb9nFLWlRTBBrsrRw8FI6U6fALbUCoXvDhbxzljg/formResponse?pli=1";
+      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdqY17kK3xXSfBqee3bXtb4YcZ19Cx6g8LOugzEW_5whBGo2A/formResponse";
 
     fetch(googleFormURL, {
       method: "POST",
