@@ -54,7 +54,7 @@ const Contact = () => {
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="contact-form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="entry.1604081075" placeholder="Your Name" required />
+            <input type="text" id="name" name="entry.718092297" placeholder="Your Name" required />
           </div>
 
           <div className="contact-form-group">
@@ -62,7 +62,7 @@ const Contact = () => {
             <input
               type="text"
               id="contact"
-              name="entry.145055622"
+              name="entry.64591422"
               placeholder="Your Contact No."
               required
               pattern="[0-9]{10}"
@@ -74,12 +74,12 @@ const Contact = () => {
 
           <div className="contact-form-group">
             <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" name="entry.78452900" placeholder="Your E-mail" required />
+            <input type="email" id="email" name="entry.1837015038" placeholder="Your E-mail" required />
           </div>
 
           <div className="contact-form-group textarea-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" name="entry.160769775" placeholder="Please Enter Your Message"></textarea>
+            <textarea id="message" name="entry.1750999263" placeholder="Please Enter Your Message"></textarea>
           </div>
 
           <div className="contact-buttons">
