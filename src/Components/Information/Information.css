@@ -1,0 +1,165 @@
+/* Main Info Section */
+.info {
+    width: 100%;
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background: #f8f9fa;
+}
+
+/* Heading */
+.info h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0c2757;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Information Containers */
+.info-container1 {
+    margin-top: 30px;
+}
+
+.info-container1,
+.info-container2 {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+}
+
+/* Info Box and Image Box */
+.info-box,
+.info-box-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    max-width: 50%;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s ease-out, transform 3s ease-out;
+}
+
+/* Animation */
+.info.animate .slide-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Info Box Styling */
+.info-box {
+    background: white;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    z-index: 2;
+    position: relative;
+}
+
+/* Headings and Paragraph */
+.info-box h2 {
+    font-size: 28px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #D4AF37;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Image Box */
+.info-box-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.info-box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Keyframes for Sliding Effect */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effect */
+.info-box:hover, 
+.info-box-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(82, 78, 78, 0.01);
+}
+
+/* Responsive Design */
+@media (max-width: 825px) {
+    .info {
+        padding: 40px 3%;
+    }
+
+    .info h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .info-container1,
+    .info-container2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .info-container1 {
+        flex-direction: column-reverse;
+    }
+
+    .info-box,
+    .info-box-img {
+        width: 100%;
+        max-width: 100%;
+        min-height: 400px;
+    }
+
+    .info-box {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .info-box-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 600px) {
+    .info h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+}

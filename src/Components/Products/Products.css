@@ -1,0 +1,361 @@
+/* Fade-in and Slide-up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial hidden state */
+.products-container {
+  overflow: visible !important;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When the component is ready */
+.products-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide-up effect for each product */
+.product-box {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.product-box.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Product Container */
+.products-container {
+  background-color: #f8f9fa;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+/* Section Title */
+.products-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #172554;
+  margin-bottom: 30px;
+}
+
+/* Product Box */
+.product-box {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+/* Product Layout */
+.product-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Image Styling */
+.product-img img,
+.slider-image img,
+.single-image img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-width: 250px; /* Ensure it's not collapsing */
+  max-width: 100%;
+  height: auto;
+}
+.product-img {
+  position: relative;
+  min-height: 250px; /* Prevent it from collapsing */
+}
+
+/* Ensure the slider fits perfectly */
+.slick-slider {
+  width: 100%;
+  max-width: 400px; /* Match image size */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Remove unwanted spacing */
+.slick-list {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  overflow: hidden;
+}
+
+/* Make the slides align properly */
+.slick-track {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Center each image properly */
+.slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Ensure image sizing is correct */
+.slider-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Ensuring Single Image is Centered */
+.single-image img {
+  width: 400px;  /* Fixed width */
+  height: 300px; /* Fixed height */
+  object-fit: cover;
+  border-radius: 10px;
+}
+.single-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Match slider width */
+  height: 300px; /* Match slider height */
+  overflow: hidden; /* Prevents stretching */
+}
+
+/* Content Styling */
+.product-content {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 550px;
+  text-align: left;
+}
+
+/* Heading */
+.product-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #D4AF37;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Serial Number */
+.product-serial {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #172554;
+}
+
+/* Bullet Points */
+.product-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-content ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: black;
+  text-align: left;
+}
+
+.product-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #D4AF37;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .products-container {
+    padding: 40px 8%;
+  }
+  .product-img,
+  .slider-image img,
+  .single-image img {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .product-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .single-image {
+    justify-content: center;
+  }
+
+  .product-content {
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+  }
+}
+
+/* For screens up to 940px */
+@media (max-width: 940px) {
+  .products-container {
+    padding: 35px 6%;
+  }
+
+  .slider-image img,
+  .single-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+  }
+
+  .product-title {
+    font-size: 1.6rem;
+  }
+
+  .product-content ul li {
+    font-size: 1rem;
+  }
+  .slider-image img,
+  .single-image img {
+    width: 380px;  /* Fixed width */
+    height: 270px; /* Fixed height */
+    object-fit: cover;
+  }
+
+  .product-img {
+    max-width: 380px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 900px) {
+  .slider-image img,
+  .single-image img {
+    width: 350px;  /* Fixed width */
+    height: 250px; /* Fixed height */
+    object-fit: cover;
+  }
+
+  .product-img {
+    max-width: 350px;
+    height: 250px;
+  }
+}
+
+/* For screens up to 800px */
+@media (max-width: 800px) {
+  .products-container {
+    padding: 30px 5%;
+  }
+
+  .slider-image img,
+  .single-image img {
+    max-width: 350px;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-content ul li {
+    font-size: 0.95rem;
+  }
+  .slider-image img,
+  .single-image img {
+    width: 300px;  /* Fixed width */
+    height: 220px; /* Fixed height */
+    object-fit: cover;
+  }
+
+  .product-img {
+    max-width: 300px; /* Ensure consistency */
+    height: 220px;
+  }
+}
+
+/* For screens up to 600px */
+@media (max-width: 600px) {
+  .products-container {
+    padding: 25px 5%;
+  }
+
+  .slider-image img,
+  .single-image img {
+    max-width: 320px;
+  }
+
+  .product-title {
+    font-size: 1.4rem;
+  }
+
+  .product-content ul li {
+    font-size: 0.9rem;
+  }
+  .slider-image img,
+  .single-image img {
+    width: 280px;
+    height: 200px;
+  }
+
+  .product-img {
+    max-width: 280px;
+    height: 200px;
+  }
+}
+
+/* For screens up to 350px */
+@media (max-width: 350px) {
+  .products-container {
+    padding: 20px 3%;
+  }
+
+  .slider-image img,
+  .single-image img {
+    max-width: 280px;
+  }
+
+  .product-title {
+    font-size: 1.2rem;
+  }
+
+  .product-content ul li {
+    font-size: 0.85rem;
+  }
+  .slider-image img,
+  .single-image img {
+    width: 230px;  /* Smallest fixed width */
+    height: 160px; /* Smallest fixed height */
+  }
+
+  .product-img {
+    max-width: 230px;
+    height: 160px;
+  }
+}

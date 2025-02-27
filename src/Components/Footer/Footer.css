@@ -1,0 +1,147 @@
+/* Footer Main Container */
+.footer-container {
+  background-color: #091830;
+  color: white;
+  padding: 40px 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-1,
+.footer-2,
+.footer-3 {
+  flex: 1;
+  min-width: 280px;
+  margin: 20px;
+  text-align: left;
+}
+
+.footer-1 p,
+.footer-2 p,
+.footer-3 p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+h4 {
+  color: #D4AF37;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #D4AF37;
+}
+
+/* Social Media Icons */
+.footer-3-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-3-icons img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-3-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Phone and Email Links */
+.footer-2 p a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-2 p a:hover {
+  color: #D4AF37;
+}
+
+/* Footer Headings */
+.footer-1-head,
+.footer-2-head,
+.footer-1-head2,
+.footer-2-head2 {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 10px;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  color: rgb(238, 226, 226);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer-top {
+    flex-direction: row;
+  }
+
+  .footer-1,
+  .footer-2,
+  .footer-3 {
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-1,
+  .footer-2,
+  .footer-3 {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 330px) {
+  .footer-container {
+    padding: 20px 10px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .contact-icon {
+    font-size: 20px;
+  }
+}

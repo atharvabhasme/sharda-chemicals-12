@@ -1,0 +1,90 @@
+/* -------- Sidebar Main Container -------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: #091830;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
+    z-index: 9999;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* -------- Logo Section -------- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 24px;
+    margin-top: -50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.logo-name p:first-child {
+    color: #D4AF37;
+    margin: 0;
+}
+
+.logo-name p:last-child {
+    color: #ffffff;
+    margin: 0;
+}
+
+/* -------- Sidebar Menu -------- */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar ul li {
+    width: 85%;
+    margin: 5px 0;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+}
+
+.sidebar ul li.active-tab {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+/* -------- Responsive Design -------- */
+@media screen and (min-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+}
