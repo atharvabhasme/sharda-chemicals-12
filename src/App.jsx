@@ -13,8 +13,13 @@ import Products from "./Components/Products/Products";
 import "./App.css";
 
 const App = () => {
+  const isExternalReferrer = document.referrer && !document.referrer.includes(window.location.origin);
+
   const [activeTab, setActiveTab] = useState(() => {
-    return sessionStorage.getItem("activeTab") || "Home";
+    if (isExternalReferrer) {
+      return "Home"; // Open Home page when coming from an external source
+    }
+    return sessionStorage.getItem("activeTab") || "Home"; // Maintain tab on refresh
   });
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -61,7 +66,7 @@ const App = () => {
       <Helmet>
         <title>{getPageTitle()}</title>
         <meta name="description" content={`${getPageTitle()} - Learn more about us.`} />
-        <meta name="keywords" content="Chemicals, Industrial Chemicals, Sharda Chemicals, Manufacturing, hardener, melamine hardener, rcc pipes, pc-base hardener, paver block" />
+        <meta name="keywords" content="Chemicals, Industrial Chemicals, Sharda Chemicals, Manufacturing" />
         <meta name="author" content="Sharda Chemicals" />
       </Helmet>
 
