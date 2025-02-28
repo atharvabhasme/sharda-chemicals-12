@@ -14,13 +14,13 @@ import "./App.css";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState(() => {
-    return localStorage.getItem("activeTab") || "Home";
+    return sessionStorage.getItem("activeTab") || "Home";
   });
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("activeTab", activeTab);
+    sessionStorage.setItem("activeTab", activeTab);
   }, [activeTab]);
 
   const handleNavbarTabChange = (newTab) => {
@@ -61,7 +61,7 @@ const App = () => {
       <Helmet>
         <title>{getPageTitle()}</title>
         <meta name="description" content={`${getPageTitle()} - Learn more about us.`} />
-        <meta name="keywords" content="Chemicals, Industrial Chemicals, Sharda Chemicals, Manufacturing" />
+        <meta name="keywords" content="Chemicals, Industrial Chemicals, Sharda Chemicals, Manufacturing, hardener, melamine hardener, rcc pipes, pc-base hardener, paver block" />
         <meta name="author" content="Sharda Chemicals" />
       </Helmet>
 
